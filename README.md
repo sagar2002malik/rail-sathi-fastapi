@@ -1,25 +1,27 @@
-# 🚄 Rail Sathi Complaint Microservice – FastAPI
+# 🚄 Rail Sathi Complaint Microservice (FastAPI + Docker)
 
-This project is a complaint-handling backend microservice built with FastAPI and PostgreSQL. It is fully Dockerized for ease of setup, local development, and deployment.
+This is a backend microservice built using **FastAPI**, designed to handle passenger complaints for the Rail Sathi platform. The service is Dockerized and uses **PostgreSQL** as the database. It supports complaint submission, retrieval, updating, deletion, and media file handling.
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### Prerequisites
+### 📌 Prerequisites
 
-- Docker & Docker Compose
+- Docker Desktop (Windows/macOS/Linux): https://www.docker.com/products/docker-desktop
 - Git
 
-### Steps to Run
+### 🛠️ Step-by-Step Setup
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/YOUR_USERNAME/rail-sathi-fastapi.git
 cd rail-sathi-fastapi
 
-# 2. Copy environment variables template
-copy .env.example .env   # (Use cp for macOS/Linux)
+# 2. Create a .env file from the example
+copy .env.example .env   # For Windows
+# OR
+cp .env.example .env     # For macOS/Linux
 
-# 3. Build and start the application
+# 3. Build and start the app using Docker
 docker-compose up --build
